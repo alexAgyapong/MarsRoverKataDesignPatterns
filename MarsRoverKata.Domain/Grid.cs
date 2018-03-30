@@ -2,7 +2,7 @@
 
 namespace MarsRoverKata.Domain
 {
-    public class Grid
+    public class Grid : INavigator
     {
         private const int MaxHeight = 10;
         private const int MaxWidth = 10;

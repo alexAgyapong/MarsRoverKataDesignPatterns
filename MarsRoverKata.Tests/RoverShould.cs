@@ -12,7 +12,7 @@ namespace MarsRoverKata.Tests
         [SetUp]
         public void SetUp()
         {
-            _rover = new Rover(new Navigator(), new Grid());
+            _rover = new Rover(new Orientator(), new Grid());
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace MarsRoverKata.Tests
             {
                 new Coordinate(0, 4)
             };
-            var rover = new Rover(new Navigator(), new Grid(obstacles));
+            var rover = new Rover(new Orientator(), new Grid(obstacles));
 
             Assert.AreEqual(expectedOutput, rover.Execute(inputCommand));
         }

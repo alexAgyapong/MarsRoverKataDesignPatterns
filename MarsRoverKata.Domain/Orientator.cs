@@ -4,7 +4,7 @@ using static MarsRoverKata.Domain.Direction;
 
 namespace MarsRoverKata.Domain
 {
-    public class Navigator
+    public class Orientator
     {
         public Direction Right(Direction orientation)
         {

@@ -7,12 +7,12 @@ namespace MarsRoverKata.Domain
         private Direction direction = North;
 
         private Coordinate coordinate = new Coordinate(0, 0);
-        private readonly Navigator navigator;
+        private readonly Orientator orientator;
         private Grid grid;
 
-        public Rover(Navigator navigator, Grid grid)
+        public Rover(Orientator orientator, Grid grid)
         {
-            this.navigator = navigator;
+            this.orientator = orientator;
             this.grid = grid;
         }
 
@@ -22,12 +22,12 @@ namespace MarsRoverKata.Domain
             {
                 if (character == 'R')
                 {
-                    direction = navigator.Right(direction);
+                    direction = orientator.Right(direction);
                 }
 
                 if (character == 'L')
                 {
-                    direction = navigator.Left(direction);
+                    direction = orientator.Left(direction);
                 }
 
                 if (character == 'M')
